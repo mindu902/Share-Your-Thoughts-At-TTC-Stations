@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sunshine Group</title>
+  </head>
+
+  <body>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB47Llf39X2XbIaHg5QCPSa0oqZ-vEbNmI&callback=initMap"
+      async defer>
+    </script>
+    <script src="mycode.js"></script>
+
+    <div class="second"> </div>
+
+    <header>
+      <h1 id="head2">A Toronto Transit Website</h1>
+    </header>
+    
+    <section>
+      <article>
+        <h2 id='stn'>Station</h2>
+         <div class='map' id='map' style='height:300px; width:500px; margin-left: auto; margin-right: auto;'></div>
+         
+         <div id='twobtn'>
+           <button id="btn1">SCHDULE</button>
+           <button id="btn2">FEEDBACKS</button>
+         </div>
+         
+
+         <div id="content1">  
+         </div>
+         <div id="content2">  
+         </div>
+
+      </article>
+
+      <article>
+
+        <h2>Choose Your Station</h2>
+      
+        <img id = "ttcmap" src="/images/ttcmap.jpg" alt="ttcmap">
+            <ul id="master">
+              <li><a>Line1</a>
+                <ul id="slave">
+                  <li id="a1"><a>Finch Station</a></li>
+                  <li id="a2"><a>North York Centre Station</a></li>
+                  <li id="a3"><a>Sheppard-Yonge Station</a></li>
+                  <li id="a4"><a>York Mills Station</a></li>
+                  <li id="a5"><a>Lawrence Station</a></li>
+                  <li id="a6"><a>Eglinton Station</a></li>
+                  <li id="a7"><a>Davisville Station</a></li>
+                  <li id="a8"><a>St Clair Station</a></li>
+                  <li id="a9"><a>Summerhill Station</a></li>
+                  <li id="a10"><a>Rosedale Station</a></li>
+                  <li id="a11"><a>Bloor-Yonge Station</a></li>
+                  <li id="a12"><a>Wellesley Station</a></li>
+                  <li id="a13"><a>College Station</a></li>
+                  <li id="a14"><a>Dundas Station</a></li>
+                  <li id="a15"><a>Queen Station</a></li>
+                  <li id="a16"><a>King Station</a></li>
+                  <li id="a17"><a>Union Station</a></li>
+                  <li id="a18"><a>St Andrew Station</a></li>
+                  <li id="a19"><a>Osgoode Station</a></li>
+                  <li id="a20"><a>St Patrick Station</a></li>
+                  <li id="a21"><a>Queen's Park Station</a></li>
+                  <li id="a22"><a>Museum Station</a></li>
+                  <li id="a23"><a>St George Station</a></li>
+                  <li id="a24"><a>Spadina Station</a></li>
+                  <li id="a25"><a>Dupont Station</a></li>
+                  <li id="a26"><a>St Clair West Station</a></li>
+                  <li id="a27"><a>Eglinton West Station</a></li>
+                  <li id="a28"><a>Glencairn Station</a></li>
+                  <li id="a29"><a>Lawrence West Station</a></li>
+                  <li id="a30"><a>Yorkdale Station</a></li>
+                  <li id="a31"><a>Wilson Station</a></li>
+                  <li id="a33"><a>Downsview Station</a></li>
+                </ul>
+              </li>
+              <li><a>Line2</a>
+                <ul id="slave">
+                  <li id="b1"><a>Kennedy</a></li>
+                  <li id="b2"><a>Warden</a></li>
+                  <li id="b3"><a>Victoria Park</a></li>
+                  <li id="b4"><a>Main Street</a></li>
+                  <li id="b5"><a>Woodbine</a></li>
+                  <li id="b6"><a>Coxwell</a></li>
+                  <li id="b7"><a>Greenwood</a></li>
+                  <li id="b8"><a>Donlands</a></li>
+                  <li id="b9"><a>Pape</a></li>
+                  <li id="b10"><a>Chester</a></li>
+                  <li id="b11"><a>Broadview</a></li>
+                  <li id="b12"><a>Castle Frank</a></li>
+                  <li id="b13"><a>Sherbourne</a></li>
+                  <li id="b14"><a>Bloor-Yonge</a></li>
+                  <li id="b15"><a>Bay</a></li>
+                  <li id="b16"><a>St George</a></li>
+                  <li id="b17"><a>Spadina</a></li>
+                  <li id="b18"><a>Bathurst</a></li>
+                  <li id="b19"><a>Christie</a></li>
+                  <li id="b20"><a>Ossington</a></li>
+                  <li id="b21"><a>Dufferin</a></li>
+                  <li id="b22"><a>Lansdowne</a></li>
+                  <li id="b23"><a>Dundas West</a></li>
+                  <li id="b24"><a>Keele</a></li>
+                  <li id="b25"><a>High Park</a></li>
+                  <li id="b26"><a>Runnymede</a></li>
+                  <li id="b27"><a>Jane</a></li>
+                  <li id="b28"><a>Old Mill</a></li>
+                  <li id="b29"><a>Royal York</a></li>
+                  <li id="b30"><a>Islington</a></li>
+                  <li id="b31"><a>Kipling</a></li>
+                </ul>
+              </li>
+              <li><a>Line3</a>
+                <ul id="slave">
+                  <li id="c1"><a>Kennedy Station</a></li>
+                  <li id="c2"><a>Lawrence East Station</a></li>                    
+                  <li id="c3"><a>Ellesmere Station</a></li>
+                  <li id="c4"><a>Midland Station</a></li>
+                  <li id="c5"><a>Scarborough Centre Station</a></li>
+                  <li id="c6"><a>McCowan Station</a></li>
+                </ul>
+              </li>
+              <li><a>Line4</a>
+                <ul id="slave">
+                  <li id="d1"><a>Sheppard-Yonge Station</a></li>
+                  <li id="d2"><a>Bayview Station</a></li>
+                  <li id="d3"><a>Bessarion Station</a></li>
+                  <li id="d4"><a>Leslie Station</a></li>
+                  <li id="d5"><a>Don Mills Station</a></li>
+                </ul>
+              </li>
+            </ul>
+    <h2 id="sendfeedback">Send Your Feedback to</h2>
+    
+    <div class="light-form" id="feedback">
+      <form action="/users/feedback/send" method="post">
+          
+          <textarea id='stn2' class="light-form__control light-form__control--textarea" name="station" readonly>Station</textarea>
+          
+          <div class="light-form__wrap">
+            <textarea class="light-form__control light-form__control--textarea" name="feedback" required></textarea>
+            
+          </div>
+
+          <div class="light-form__wrap--center">
+            <input id="sendbtn" class="light-form__btn" type="submit" value="Send" disabled="true" />
+          </div>
+
+      </form>
+    </div>
+   
+
+      </article>
+    </section>
+
+    <div id= "cover" class="last">
+      <button id = 'back' type="button">Back to Top</button>
+    </div>
+
+  </body>
+  </html>

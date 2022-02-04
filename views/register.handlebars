@@ -1,0 +1,39 @@
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+  <div class="light-form" id="feedback">
+    <div class="light-form__title">Register</div>
+    <form method="post" action="/users/register">
+      <div class="light-form__wrap">
+          <input class="light-form__control light-form__control--text" type="text" name="name" required/>
+          <label class="light-form__label">Name:</label>
+      </div>
+
+      <div class="light-form__wrap">
+          <input class="light-form__control light-form__control--text" type="text" name="username" required/>
+          <label class="light-form__label">Username:</label>
+      </div>
+
+      <div class="light-form__wrap">
+          <input class="light-form__control light-form__control--text" type="email" name="email" required/>
+          <label class="light-form__label">Email:</label>  
+      </div>
+
+      <div class="light-form__wrap">
+          <input class="light-form__control light-form__control--text" type="password" name="password" required/>
+          <label class="light-form__label">Password:</label>  
+      </div>
+
+      <div class="light-form__wrap">
+          <input class="light-form__control light-form__control--text" type="password" name="password2" required/>
+          <label class="light-form__label">Confirm password:</label>  
+      </div>
+
+      <div class="light-form__wrap--center">
+        <input class="light-form__btn" type="submit" value="Submit"/>
+      </div>
+    </form>
+  </div>

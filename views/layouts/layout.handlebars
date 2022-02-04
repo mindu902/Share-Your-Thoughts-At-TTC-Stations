@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sunshine Group</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+
+<body>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+
+      <header id="present">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            /* if is user, then check the review */
+            {{#if user}}
+              <li id="welcome"><a href="/" id="wel">{{username}}</a></li>
+              <li role="presentation" id="sign"><a href="/users/feedback/view">Feedback</a></li>
+              <li role="presentation" id="sign"><a href="/users/logout">Logout</a></li>
+            /* if is not user, then register a new account */
+            {{else}}
+              <li role="presentation" id="sign"><a href="/users/login">Login</a></li>
+              <li role="presentation" id="sign"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+      </div>
+
+</body>
+</html>
